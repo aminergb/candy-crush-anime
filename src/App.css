@@ -1,0 +1,95 @@
+
+.game{
+  display:flex;
+  flex-direction: row-reverse;
+  height: 100vh;
+  width: 100vw;
+  
+  
+}
+.matrix {
+  width : 600px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.fixed-score-board{
+  display: flex;
+  flex-direction: column-reverse;
+  position: absolute;
+  height:inherit;
+  width: 30vw;
+  left: 5vh;
+  top:1vh;
+  box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.score-board{
+  height: 600px;
+  position:relative;
+  flex :1;
+  width: inherit;
+
+  text-align: center;
+
+}
+.score {
+  flex:1 ;
+  font-size: 6em;
+ 
+  
+}
+.texties{
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+  flex:1;
+  font-size: 2em;
+}
+.matrix img{
+  width: 70px;
+  height:  70px;
+  
+}
+.slot{
+  
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  position:relative;
+
+}
+
+.slot::before{
+  
+  position: absolute;
+content: '';
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: -1;
+
+border: var(--border-size) solid var(--background-color);
+transition: top, left, right, bottom, 100ms ease-in-out;
+
+
+}
+.slot:hover::before,
+.slot:focus::before {
+  --background-color: #E3E3E3;
+  --border-size: 2px;
+  --accent-color: #0AF;
+top: calc(var(--border-size) * -2);
+left: calc(var(--border-size) * -2);
+right: calc(var(--border-size) * -2);
+bottom: calc(var(--border-size) * -2);
+
+border: var(--border-size) solid var(--accent-color);
+transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
