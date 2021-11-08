@@ -1,5 +1,5 @@
 const Slot =({ index,  candyColor,setObjDragged,setObjReplaced,onDragEnd})=>{
-    
+    //the slot that contains the image
 const dragStart= (e)=>{
 
     setObjDragged(e.target)

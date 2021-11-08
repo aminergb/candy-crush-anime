@@ -1,5 +1,5 @@
 const ScoreBoard =({score=0})=>{
-  
+  //the scoreboard
 return <div className="score-board">
     <div className="fixed-score-board">
     <div className="score">{score}</div>
